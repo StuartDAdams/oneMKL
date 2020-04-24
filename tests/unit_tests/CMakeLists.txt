@@ -43,8 +43,6 @@ if(BUILD_SHARED_LIBS)
     ONEMKL::SYCL::SYCL
     onemkl
     blas_level1_rt
-    blas_level2_rt
-    blas_level3_rt
   )
 endif()
 
@@ -89,8 +87,6 @@ target_link_libraries(test_main_ct PUBLIC
     ${ONEMKL_LIBRARIES}
     ONEMKL::SYCL::SYCL
     blas_level1_ct
-    blas_level2_ct
-    blas_level3_ct
 )
 
 if(BUILD_SHARED_LIBS)

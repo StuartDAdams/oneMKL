@@ -18,7 +18,7 @@
 #===============================================================================
 
 # Build object from all test sources
-set(L1_SOURCES "nrm2.cpp" "iamin.cpp" "iamax.cpp" "dotu.cpp" "dot.cpp" "dotc.cpp" "copy.cpp" "axpy.cpp" "asum.cpp" "swap.cpp" "sdsdot.cpp" "scal.cpp" "rotmg.cpp" "rotm.cpp" "rotg.cpp" "rot.cpp")
+set(L1_SOURCES "asum.cpp") # "nrm2.cpp" "iamin.cpp" "iamax.cpp" "dotu.cpp" "dot.cpp" "dotc.cpp" "copy.cpp" "axpy.cpp" "asum.cpp" "swap.cpp" "sdsdot.cpp" "scal.cpp" "rotmg.cpp" "rotm.cpp" "rotg.cpp" "rot.cpp")
 
 if(BUILD_SHARED_LIBS)
   add_library(blas_level1_rt OBJECT ${L1_SOURCES})

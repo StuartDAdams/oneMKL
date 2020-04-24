@@ -23,6 +23,7 @@ namespace onemkl {
 namespace cublas {
 
 cublas_handle::~cublas_handle() noexcept(false) {
+    std::cout << "cublas_handle Destructor\n";
     for (auto &handle_pair : cublas_handle_mapper_) {
         cublasStatus_t err;
         if (handle_pair.second != nullptr) {
@@ -78,6 +79,9 @@ CublasScopedContextHandler::~CublasScopedContextHandler() noexcept(false) {
 }
 
 void ContextCallback(void *userData) {
+
+    std::cout << "Context callback invoked!\n";
+
     auto *ptr = static_cast<std::atomic<cublasHandle_t> **>(userData);
     if (!ptr) {
         return;
